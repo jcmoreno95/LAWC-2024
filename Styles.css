@@ -1,0 +1,448 @@
+body {
+    background-color: #003366; /* Lighter blue than the navbar */
+    color: #ffffff; /* White text for readability */
+    font-family: "Press Start 2P", sans-serif; /* Example font */
+    margin: 0;
+    padding: 0;
+  }
+
+/* Navbar Styling */
+.custom-navbar {
+    background-color: #001f3f; /* Dark blue */
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Brand Logo */
+  .custom-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; /* White for contrast */
+    text-transform: uppercase;
+  }
+  
+  /* Navbar Links */
+  .custom-link {
+    font-size: 0.8rem;
+    font-family: "Press Start 2P", system-ui;
+    color: #ffffff; /* White for contrast */
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-link:hover {
+    color: #66b2ff; /* Lighter blue for hover effect */
+  }
+  
+  /* Search Form */
+  .custom-search-form {
+    gap: 5px; /* Space between input and button */
+  }
+  
+  .custom-search-input {
+    border-radius: 20px;
+    border: 1px solid #66b2ff; /* Lighter blue border */
+    padding: 0.5rem 1rem;
+  }
+  
+  .custom-search-input:focus {
+    outline: none;
+    border-color: #66b2ff;
+  }
+  
+  .custom-search-button {
+    background-color: #66b2ff; /* Light blue */
+    color: #ffffff; /* White icon */
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .custom-search-input::placeholder {
+    font-size: 0.7rem; /* Tamaño base */
+  }
+
+  .custom-search-button:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
+  }
+
+  /* Shopping Cart Button */
+.custom-cart-button {
+    background-color:  #66b2ff; /* Light blue */
+    color: #ffffff; /* White icon */
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem; 
+  }
+  
+  .custom-cart-button:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
+    color: #ffffff;
+  }
+
+ /* Material Symbols Settings */
+ .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+  
+  
+  /* Active Link */
+  .navbar-nav .active {
+    color: #66b2ff !important;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+
+  /* About Us Card */
+/* Card styling */
+.auccard {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(29, 8, 70);
+    background-color: #001f3f;
+    padding: 15px;
+  }
+  
+  /* Card image styling */
+  .auccard-img-top {
+    width: 200px; /* Adjust the size */
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin: 20px auto 0 auto; /* Center the image */
+    display: block; 
+  }
+  
+  /* Card body */
+  .auccard-body {
+    text-align: center;
+  }
+  
+  /* Card title */
+  .auccard-title {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: sans-serif;
+  }
+  
+  /* Card text */
+  .auccard-text {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+  }
+  
+  /* Button styling */
+  .aucbtn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+    font-family: sans-serif;
+  }
+  
+  .aucbtn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    /* On smaller screens (tablets), reduce the card's image size */
+    .auccard-img-top {
+      width: 150px; /* Smaller size */
+      height: 150px;
+    }
+  
+    /* Adjust card text */
+    .auccard-title, .auccard-text {
+      font-size: 1rem; /* Adjust font size */
+    }
+  
+    /* Center the card content and adjust padding */
+    .auccard {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* On very small screens (mobile), make further adjustments */
+    .auccard-img-top {
+      width: 120px; /* Even smaller image size */
+      height: 120px;
+    }
+  
+    .auccard-title, .auccard-text {
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  
+    /* Adjust card padding */
+    .auccard {
+      padding: 5px;
+    }
+  
+    /* Adjust button size */
+    .aucbtn-primary {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  /* Product Card styling */
+  .card {
+    box-shadow: 0 10px 20px #000000;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Distribute space between content */
+    height: 100%; /* Ensure cards have the same height */
+    position: relative; /* For future positioning of the button */
+    padding-bottom: 30px;
+    
+  }
+  
+  /* Ensure the image takes the same size across all cards and is fully visible */
+  .card-img-top {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: auto; /* The height adjusts automatically based on the aspect ratio */
+    max-height: 190px; /* Scale down the image by setting a maximum height */
+    object-fit: contain; /* Ensures the entire image is visible, scaling down without cropping */
+    margin-bottom: 2px; /* Add some space below the image */
+  }
+  
+  /* Style the card body */
+  .card-body {
+    padding: 15px;
+    flex-grow: 1; /* Makes sure the card body takes the available space */
+  }
+  
+  /* Ensure uniformity for the card title */
+  .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center; /* Asegura que el texto esté centrado */
+    color: #000000;
+    word-wrap: break-word; /* Permite que el texto largo se divida en varias líneas */
+    white-space: normal;
+  }
+  
+  /* Optional: Style the card text */
+  .card-text {
+    font-size: 1.2rem;
+    text-align: center;
+    color:green
+  }
+  
+  /* Style the button */
+  .card a {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Ensure responsiveness for small screens */
+
+  .limited-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limita el texto a 3 líneas con prefijo Webkit */
+    display: box; /* Compatibilidad con versiones más antiguas de navegadores */
+    box-orient: vertical; /* Compatibilidad para el estilo en Firefox */
+    line-clamp: 3; /* Estándar de CSS (sin prefijo) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em;
+    font-size: 0.8rem;
+    color:rgb(101, 99, 99)
+
+  }
+
+
+  .custom-detail {
+    background-color: #66b2ff; /* Light blue */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 0.8rem;
+    position: absolute; /* Fix position relative to the card */
+    bottom: 10px; /* 10px above the bottom of the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+  }
+
+  .custom-detail:hover {
+    background-color: #0056b3;
+    border-color: #ffffff;
+    color:#ffffff
+  }
+
+  .limited-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limita el texto a 3 líneas con prefijo Webkit */
+    display: box; /* Compatibilidad con versiones más antiguas de navegadores */
+    box-orient: vertical; /* Compatibilidad para el estilo en Firefox */
+    line-clamp: 3; /* Estándar de CSS (sin prefijo) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em;
+  }
+  
+  .modal-body img {
+    display: block; /* Hace que la imagen sea un bloque para que se pueda centrar */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho disponible */
+    max-width: 150px; /* Establece un tamaño máximo para la imagen */
+    height: auto;
+
+  }
+
+  .modal-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center; /* Ensures the text is centered */
+    color: #000000; /* Text color */
+    word-wrap: break-word; /* Allows long words to break and wrap to the next line */
+    white-space: normal; /* Ensures the text flows naturally into multiple lines */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    padding-bottom: 2%;
+  }
+
+
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#001f3f;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#001f3f;
+  }
+
+  #add-to-cart-button {
+    background-color: #28a745; /* Tono verde */
+    border-color: #28a745; /* Asegura que el borde también sea verde */
+  }
+  
+  #add-to-cart-button:hover {
+    background-color: #218838; /* Un verde más oscuro cuando el botón es presionado */
+    border-color: #1e7e34; /* Un borde más oscuro */
+  }
+
+  #alert-message {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 3000;
+    display: none;
+    animation: fadeOut 3s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .card-title-cart{
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center; /* Asegura que el texto esté centrado */
+    color: #000000;
+    word-wrap: break-word; /* Permite que el texto largo se divida en varias líneas */
+    white-space: normal;
+  }
+
+    /* Optional: Style the card text */
+    .card-text-cart {
+      font-size: 1rem;
+      text-align: center;
+      color:green
+    }
+
+    .card-img-top-cart {
+      width: 100%; /* Ensures the image takes the full width of the card */
+      height: auto; /* The height adjusts automatically based on the aspect ratio */
+      max-height: 150px; /* Scale down the image by setting a maximum height */
+      object-fit: contain; /* Ensures the entire image is visible, scaling down without cropping */
+      margin-bottom: 2px; /* Add some space below the image */
+    }
+
+    .cart-item {
+      border-bottom: 1px solid #ddd; /* Separates each product */
+      padding-bottom: 1rem; /* Space below the item */
+      margin-bottom: 1.5rem; /* Space between cart items */
+    }
+
+    .custom-cart-button-checkout {
+      background-color:#1e7e34; /* Light blue */
+      color: #ffffff; /* White icon */
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0rem; 
+    }
+
+    .custom-cart-button-empty {
+      background-color:  #da5237; /* Light blue */
+      color: #ffffff; /* White icon */
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0rem; 
+    }
+
+    .quantity-display {
+      color: black;
+    }
+
+
+    .btn-green {
+      background-color: #28a745; /* Green color */
+      color: white; /* Text color */
+      border-color: #28a745; /* Border color */
+    }
+    
+    .btn-green:hover {
+      background-color: #218838; /* Darker green on hover */
+      border-color: #1e7e34; /* Darker border color on hover */
+    }
+
+
+    .btn-red {
+      background-color: #a44f4f; /* Green color */
+      color: white; /* Text color */
+      border-color: #a44f4f; /* Border color */
+    }
+    
+    .btn-red:hover {
+      background-color: #a72828; /* Darker green on hover */
+      border-color: #a72828; /* Darker border color on hover */
+    }
+
+
+    
